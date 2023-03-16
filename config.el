@@ -122,6 +122,14 @@
 
 ;; Org-roam settings
 (setq org-roam-directory "~/Desktop/RoamNotes")
+;; Org-roam-ui settings
+(use-package! org-roam-ui
+  :after org-roam
+  :config
+  (setq org-roam-ui-sync-theme t
+        org-roam-ui-follow t
+        org-roam-ui-update-on-save t
+        org-roam-ui-open-on-start t))
 
 ;; Change Font Size
 (setq doom-font (font-spec :size 16))
