@@ -121,7 +121,16 @@
 (setq hscroll-margin 1)
 
 ;; Org-roam settings
-(setq org-roam-directory "~/Desktop/RoamNotes")
+(use-package! org-roam
+  :custom
+  (org-roam-directory "~/Desktop/RoamNotes")
+  (org-roam-complete-everywhere t)
+  )
+(map! :leader
+      :desc "insert node by completion"
+      :n
+      "nrc" #'completion-at-point)
+
 ;; Org-roam-ui settings
 (use-package! org-roam-ui
   :after org-roam
