@@ -131,6 +131,8 @@
       :n
       "nrc" #'completion-at-point)
 
+(use-package! websocket
+    :after org-roam)
 ;; Org-roam-ui settings
 (use-package! org-roam-ui
   :after org-roam

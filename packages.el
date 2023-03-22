@@ -52,4 +52,6 @@
 (package! key-chord)
 (package! pdf-tools)
 (package! cmake-mode)
+(unpin! org-roam)
 (package! org-roam-ui)
+(package! auctex)
