@@ -144,5 +144,7 @@
 
 ;; Change Font Size
 (setq doom-font (font-spec :size 16))
+;; Org-mode latex preview
+(add-hook 'org-mode-hook 'org-fragtog-mode)
 ;; pdf-tools
 (add-hook 'pdf-view-mode-hook 'pdf-continuous-scroll-mode)
