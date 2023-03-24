@@ -56,3 +56,4 @@
 (package! org-fragtog)
 (package! org-roam-ui)
 (package! auctex)
+;; (package! yasnippet)

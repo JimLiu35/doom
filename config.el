@@ -91,6 +91,11 @@
       :n
       "td" #'treemacs-select-directory)
 
+(map!
+      :desc "Org Latex Preview"
+      :n
+      "tlp" #'org-latex-preview)
+
 (define-key evil-normal-state-map (kbd "J")
     (lambda nil (interactive) (evil-next-visual-line 5)))
 
@@ -146,5 +151,10 @@
 (setq doom-font (font-spec :size 16))
 ;; Org-mode latex preview
 (add-hook 'org-mode-hook 'org-fragtog-mode)
+(add-hook 'org-mode-hook #'turn-on-org-cdlatex)
+;; Latex snippets
+(setq yas-triggers-in-field t)
+;; (yas-reload-all)
+;; (add-hook 'prog-mode-hook #'yas-minor-mode)
 ;; pdf-tools
 (add-hook 'pdf-view-mode-hook 'pdf-continuous-scroll-mode)
